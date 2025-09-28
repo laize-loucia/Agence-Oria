@@ -1,0 +1,7 @@
+@import "./bodyHeader.css";
+@import "./bodyFooter.css";
+
+body > header,
+body > footer {
+  z-index: 100;
+}

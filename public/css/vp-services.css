@@ -1,0 +1,472 @@
+/* @import "./generic.css"; */
+@import "./section-contact.css";
+
+section#landing {
+  position: relative;
+	display: flex;
+	flex-direction: column;
+	/*justify-content: center;
+	align-items: center;*/
+
+  position: relative;
+  width: 100%;
+  /* height: 100vh; */
+  
+  margin-bottom: 3.5em;
+
+  text-align: center;
+  color: white;
+  background-color: var(--color-3, #060011);
+
+  aspect-ratio: 2 / 1;
+}
+
+@media screen and (min-height: 875px) {
+  section#landing {
+    max-height: 100vh;
+  }
+}
+@media screen and (max-height: 874px) {
+  section#landing {
+    aspect-ratio: 3 / 1;
+  }
+}
+/*section#landing > div.foreground,
+section#landing > div.background{
+  position: absolute;
+	width: 100%;
+  height: 100%;
+}*/
+
+section#landing > .wrapper,
+section#landing .content {
+  box-sizing: border-box;
+  height: 100%;
+}
+section#landing .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: calc(-8em + 11vw);
+
+  padding: calc(1em + 3vw) 10%;
+  padding-top: calc(1em + var(--header-safe-area-height, 0));
+  font-size: calc(.5em + .5vw);
+}
+section#landing .content > .row {
+  display: flex;
+  gap: calc(1.5em + 10%);
+}
+section#landing .content > .row > .column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: calc(.33em + 1vw);
+}
+section#landing  .content h1 {
+  margin-bottom: .15em;
+  font-size: calc(1.33em + 1.5vw);
+  font-family: SF-Pro-Display;
+  text-align: left;
+  line-break: strict;
+  margin-bottom: .15em;
+}
+section#landing  .content p {
+  text-align: left;
+}
+
+section#landing  .content .contact-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#landing  .content .contact-link .btn-contact {
+  font-size: 1.05em;
+}
+section#landing  .content .contact-link .additionnal-info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  gap: .5em;
+
+  font-size: .75em;
+}
+section#landing  .content .contact-link .additionnal-info::before {
+  content: url("../img/icon-tick-4.svg");
+  font-size: 0em;
+}
+
+
+
+
+section#landing .content .illustration-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section#landing .content .illustration-holder > .illustration {
+  width: 100%;
+}
+
+
+section#landing .content > .row.bottom {
+  padding: 0 calc(.25em + 2.5%);
+}
+
+
+
+
+
+
+.section-label {
+  margin: 0;
+}
+
+
+section .section-label {
+  display: flex;
+  align-items: center;
+  gap: .1em;
+  color: var(--color-2, blueviolet);
+}
+section .section-label::before,
+section .section-label::after {
+  /*content: "-";*/
+  content: "";
+  width: 1em;
+  height: .075em;
+  border-radius: 50%;
+  opacity: .5;
+}
+section .section-label::before {
+  background: var(--gradient-3, inherit);
+}
+section .section-label::after {
+  background: var(--gradient-4, inherit);
+}
+
+
+
+
+
+
+
+section#clientAdvantages .content-row {
+  display: flex;
+  gap: calc(1.5em + 5%);
+}
+section#clientAdvantages .content-row > * {
+  flex: 1;
+}
+section#clientAdvantages .content-row > *:last-child {
+  flex: 1.33;
+}
+
+
+
+section#clientAdvantages .benefit {
+  gap: calc(.75em + 2.25vw);
+  padding: 1.25em 0;
+}
+section#clientAdvantages .benefits::before {
+  content: "";
+}
+section#clientAdvantages .benefits::before,
+section#clientAdvantages .benefits > hr {
+  width: 100%;
+  height: .05em;
+  border: 0;
+  margin: 0;
+  background: var(--gradient-5);
+}
+
+section#clientAdvantages .benefit > .column {
+  justify-content: center;
+  gap: .25em;
+}
+section#clientAdvantages .benefit > .column:nth-of-type(1) {
+  flex: 1;
+}
+section#clientAdvantages .benefit > .column:nth-of-type(2) {
+  flex: 2;
+}
+
+section#clientAdvantages .benefit .num,
+section#clientAdvantages .benefit .catchphrase,
+section#clientAdvantages .benefit .description {
+  margin: 0;
+}
+section#clientAdvantages .benefit .num {
+  color: var(--color-2, blueviolet);
+  font-weight: bold;
+  font-size: .75em;
+}
+section#clientAdvantages .benefit .description {
+  font-size: .825em;
+  text-align: justify;
+}
+
+
+
+
+
+
+
+
+.asideAsset-container {
+  position: relative;
+}
+#asideAsset-1 {
+  position: absolute;
+  width: 12.5%;
+  top: -11.25em;
+}
+
+
+
+
+
+
+
+section#websiteNeeds .btn-contact,
+section#websiteNeeds .btn-contact > img {
+  display: block;
+  width: 100%;
+}
+section#websiteNeeds .btn-contact:hover {
+  transform: scale(.985) rotate(-.2deg);
+  animation-name: shine;
+  animation-duration: .4s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+}
+@keyframes shine {
+  0% {filter: brightness(1);}
+  33.3% {filter: brightness(1.2);}
+  100% {filter: brightness(1);}
+}
+
+
+
+
+
+
+
+
+
+
+section#features .section-description {
+  font-size: .9125em;
+}
+
+
+section#features .content-row {
+  gap: calc(10% + 2.5em);
+}
+section#features .content-row .column:first-child {
+  flex: 1;
+}
+section#features .content-row .column:last-child {
+  flex: 1.25;
+}
+
+section#features .btn-contact {
+  width: fit-content;
+}
+
+
+section#features .features {
+  gap: 1.5em;
+}
+section#features .feature-wrapper {
+  align-items: center;
+
+  padding: 0em 1.5em;
+  
+  border-radius: 1em;
+  box-shadow: 0 .1em .33em 0 rgba(0, 0, 0, .33);
+}
+section#features .feature-wrapper::before,
+section#features .feature-wrapper::after {
+  content: "";
+  width: 100%;
+  height: .05em;
+  border: 0;
+  margin: 0;
+  background: var(--gradient-5);
+}
+
+section#features .feature {
+  gap: 1.5em;
+  padding: .66em 0em;
+}
+section#features .feature .content {
+  gap: .33em;
+}
+section#features .feature h3,
+section#features .feature p {
+  margin: 0;
+}
+section#features .feature .feature-description {
+  font-size: .825em;
+}
+
+
+
+
+
+
+section#process > .column {
+  gap: 2.5em;
+}
+section#process .content {
+  justify-content: space-evenly;
+  gap: calc(5% + 2.5em);
+}
+section#process .content > *:first-child {
+  width: 12.5%;
+}
+section#process .content > *:last-child {
+  width: calc(75% - 5em);
+  max-width: calc(50%);
+  overflow: hidden;
+}
+
+section#process .timeline-wrapper {
+  --max-height: 20em;
+  max-height: var(--max-height);
+  overflow-y: hidden;
+  transition: all .9s ease;
+}
+section#process .timeline {
+  width: 100%;
+}
+
+section#process .processus-steps {
+  justify-content: space-between;
+  gap: .66em;
+}
+
+
+
+
+
+
+
+
+
+section#achievements > .column {
+  gap: 1.5em;
+}
+section#achievements .projects-wrapper {
+  overflow-x: auto;
+}
+section#achievements .projects {
+  gap: 2em;
+  width: 120%; /* TO DO: solve this (scrollable horizontally whatever is the nb of projects)*/
+}
+section#achievements .project {
+  justify-content: flex-end;
+
+  position: relative;
+
+  width: calc(5em + 33%);
+  aspect-ratio: 4/3;
+
+  border-radius: 1em;
+  background: var(--gradient-1, var(--color-2, purple));
+  text-decoration: none;
+
+  overflow: hidden;
+
+  color: var(--color-0, white);
+}
+
+section#achievements .project .logo {
+  position: absolute;
+  top: .6em;
+  left: .85em;
+  height: 1.33em;
+}
+section#achievements .project .mockup-wrapper {
+  align-items: center;
+  justify-content: center;
+
+  max-height: 60%;
+}
+section#achievements .project .mockup {
+  height: 100%;
+}
+
+section#achievements .project .info {
+  align-items: center;
+  justify-content: space-between;
+
+  padding: .5em .85em;
+  background-color: var(--color-6, purple);
+
+  z-index: 10;
+}
+section#achievements .project .info::after {
+  content: "";
+  aspect-ratio: 1/1;
+  height: 70%;
+  background: url('../img/icon-arrow-upright-1.svg'),
+    var(--color-0, white);
+  background-position: center;
+  background-size: 1.25em;
+  border-radius: .4em;
+
+  transition: all .4s ease-out;
+}
+section#achievements .project .content {
+  gap: .05em;
+}
+section#achievements .project .content h4,
+section#achievements .project .content p {
+  margin: 0;
+}
+section#achievements .project .content .type {
+  font-size: .8em;
+}
+
+
+
+section#achievements .project:hover {
+  box-shadow: inset 0 0 .8em .1em rgba(0, 0, 0, .5);
+}
+section#achievements .project:hover .info {
+  box-shadow: 0 -.1em .4em 0 rgba(255, 255, 255, .25);
+}
+section#achievements .project:hover .mockup {
+  filter: brightness(1.33);
+  transform: scale(1.01);
+}
+section#achievements .project .info:hover::after {
+  animation-name: wiggle;
+  animation-duration: .4s;
+  animation-timing-function: ease;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-delay: 0s;
+}
+@keyframes wiggle {
+  0% {transform: scale(1) rotate(0deg);}
+  50% {transform: rotate(-4deg);}
+  100% {transform: scale(1.125) rotate(6deg);}
+}
+
+section#achievements .project[data-project="Ticketmaster"] .logo {
+  top: .75em;
+  height: .85em;
+}
+section#achievements .project[data-project="Top 10 des films d'horreur les plus terrifiants"] .content .label {
+  font-size: .785em;
+}
+
+
+
+

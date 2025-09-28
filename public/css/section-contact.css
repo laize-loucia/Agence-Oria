@@ -1,0 +1,205 @@
+/*body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}*/
+
+section#contact {
+    display: flex;
+    flex-direction: column;
+    /*gap: 1.25em;*/
+    
+    /*width: 100%;
+    max-width: 900px;*/
+    padding: 2.5em 3.5em;
+
+    border-radius: 1em;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section#contact h2,
+section#contact h3,
+section#contact p {
+    margin: 0;
+}
+
+section#contact .wrapper {
+    display: flex;
+    flex-direction: row;
+
+    gap: calc(1em + 8vw);
+}
+section#contact .wrapper > * {
+    flex: 1;
+}
+
+section#contact .form-container {
+    flex: 1;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding-top: 2em;
+}
+
+
+
+/* Partie droite : Informations */
+section#contact .info-container {
+    display: flex;
+    flex-direction: column; /* Les autres éléments (comme les adresses, etc.) restent en colonne */
+    gap: 20px;
+}
+section#contact .info-container div {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacement entre les icônes et le texte */
+    font-size: 14px;
+}
+
+/* Aligner les icônes en ligne (row) */
+section#contact .info-container .stats {
+    display: flex;
+    gap: 20px; /* Espacement entre les icônes */
+    align-items: center;
+}
+
+
+
+
+/* Partie gauche : Formulaire */
+section#contact #contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+section#contact .form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+section#contact .form-group.required::after {
+    content: "*";
+    position: absolute;
+    right: -.85em;
+    color: red;
+}
+
+section#contact .form-group.double {
+    flex-direction: row;
+    gap: 2.5em;
+}
+section#contact .form-group.double > .form-group {
+    flex: 1;
+    width: 0;
+}
+
+section#contact input,
+section#contact textarea {
+    font-family: inherit;
+    font-size: 14px;
+    padding: .66em;
+    border: 0;
+    border-radius: .33em;
+}
+
+section#contact textarea {
+    resize: none;
+}
+
+section#contact .button-container {
+    text-align: center; 
+}
+
+section#contact .btn-submit {
+    background-color: #38009E;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+section#contact .btn-submit:hover {
+    background-color: #FE891D;
+}
+
+/* Partie droite : Informations */
+section#contact .info-container .stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+section#contact .info-container .stats > .item {
+    display: flex;
+    flex-direction: column;
+}
+section#contact .info-container .stats > .item > .info {
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
+    width: 100%;
+    text-align: center;
+}
+section#contact .info-container .stats > .item > .info span {
+    font-size: .9em;
+}
+section#contact .info-container .stats > .item > img {
+    width: calc(50% + 2vw);
+}
+
+section#contact .info-container .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+section#contact .info-container .contact-details > .item {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+section#contact .info-container .contact-details > .item > img {
+    width: 1.5em;
+}
+
+
+
+
+
+section#contact .form-group:not(.double),
+section#contact .form-group:not(.double) {
+    padding: .05em;
+    border-radius: .33em;
+    background: var(--gradient-0);
+}
+
+
+
+
+
+@media screen and (max-width: 700px) {
+    section#contact .wrapper {
+        flex-direction: column;
+        gap: calc(1em + 4vw);
+        margin-bottom: 1em;
+    }
+    section#contact .info-container .stats {
+        padding-bottom: .66em;
+    }
+    section#contact {
+        padding: calc(1.5em + 2vw) calc(1em + 2.5vw) !important;
+    }
+}
+@media screen and (max-width: 470px) {
+    section#contact .info-container .stats .item {
+        max-width: 47%;
+    }
+}

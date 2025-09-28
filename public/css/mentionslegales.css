@@ -1,0 +1,8 @@
+@import "./fonts.css";
+@import "./bodyHeaderFooter.css";
+@import "./common.css";
+
+main {
+  width: 80% !important;
+  padding: 5em !important;
+}

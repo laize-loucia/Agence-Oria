@@ -1,0 +1,33 @@
+@font-face{
+    font-family: "TheBoldFont";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../font/TheBoldFont.ttf");
+}
+
+@font-face{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../font/Roboto-Regular.ttf");
+}
+
+@font-face{
+    font-family: "InstrumentSerif-Regular";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../font/InstrumentSerif-Regular.ttf");
+}
+@font-face{
+    font-family: "InstrumentSerif-Italic";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../font/InstrumentSerif-Italic.ttf");
+}
+
+@font-face{
+    font-family: "SF-Pro-Display";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../font/SF-Pro-Display-Regular.ttf");
+}

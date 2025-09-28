@@ -1,0 +1,168 @@
+@import './rwd-bodyFooter.css';
+
+body > footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Aligne les éléments verticalement au centre */
+  justify-content: space-between;
+  /* gap: 5%; */
+
+  width: 100%;
+  padding: 0 10.75%;
+  box-sizing: border-box;
+  
+  /*background: linear-gradient(180deg, #000000, #2E006B, #561C8D);*/
+  background: linear-gradient(to bottom, #00000000, #1a034588 40%, #38009E88),
+    url("../img/landing-bg-blurred-borders.svg");
+  background-size: cover;
+  background-position-y: 87.5%;
+  
+  color: var(--color-0, #fff);
+}
+
+body > footer > .top-row,
+body > footer > .bottom-row,
+body > footer > hr {
+  width: 100%;
+
+}
+body > footer > .top-row,
+body > footer > .bottom-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+body > footer > .top-row {
+  justify-content: space-between;
+  width: 97.5%;
+  padding-top: 2.25em;
+  padding-bottom: 1.25em;
+}
+body > footer > hr {
+  color: white;
+  width: 87.5%;
+  margin: .33em 0;
+}
+
+
+body > footer > .bottom-row {
+  font-size: .75em;
+}
+body > footer > .bottom-row li {
+  padding: 0 1em;
+}
+body > footer > .bottom-row li:not(:first-child) {
+  border-left: .1em solid var(--color-0);
+}
+
+
+
+body > footer .top-row .logo-oria {
+  width: 7.5em;
+}
+body > footer .top-row > :last-child {
+  display: flex;
+  justify-content: center;
+  width: 66.66%;
+  padding-right: calc(2% + 3.5vw);
+}
+
+
+
+
+
+
+/* Colonnes du footer */
+body > footer .top-row .columns {
+  display: flex;
+  justify-content: space-around;
+  gap: calc(.25em + 1vw);
+  flex: 1;
+  text-align: left;
+
+  font-size: .75em;
+}
+
+/* Chaque colonne (réseaux sociaux, nous suivre, etc.) */
+body > footer .top-row .column {
+  display: flex;
+  flex-direction: column;
+  gap: .45em;
+  text-align: center;
+}
+
+body > footer .top-row .column h4,
+body > footer .top-row .column .item {
+  margin: 0;
+}
+body > footer .top-row .column h4 {
+  margin-bottom: .25em;
+  font-weight: normal;
+  font-size: 1.1em;
+  color: #ffffff;
+}
+body > footer .top-row .column .item {
+  font-size: 1em;
+  color: #cccccc;
+  text-decoration: none;
+}
+body > footer .top-row .column .item:hover {
+  text-decoration: underline;
+}
+body > footer .top-row .column .item.icon-before{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: .75em;
+}
+body > footer .top-row .column .item.icon-before::before {
+  content:"";
+  
+  background-size: 1.1em;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  width: 1.1em;
+  height: 1.25em;
+
+  filter: brightness(0) invert(1);
+}
+body > footer .top-row .column .item.icon-before.email::before {
+  background-image: url("../img/icon-mail.svg");
+}
+body > footer .top-row .column .item.icon-before.phone::before {
+  background-image: url("../img/icon-phone.svg");
+}
+body > footer .top-row .column .item.icon-before.location::before {
+  background-image: url("../img/icon-location.svg");
+}
+
+/* Icônes des réseaux sociaux */
+body > footer .social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+body > footer .social-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.33em;
+}
+body > footer .social-icons img {
+  width: 1em;
+  filter: brightness(.75);
+  transition: filter .075s linear;
+}
+body > footer .social-icons a:hover img {
+  filter: brightness(1);
+  transform: scale(1.1);
+}
+
+
+
+body > footer .row-menu .decoratedItem-1 .itemDecoration {
+	--decoration-height: .075em;
+	bottom: -.0125em;
+}

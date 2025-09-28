@@ -1,0 +1,219 @@
+section#team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*width: 100%;
+  margin-top: 1.25em;*/
+}
+
+section#team h1 {
+  text-align: center;
+  margin-bottom: 1.25em; 
+  padding-top: 0.625em; 
+  padding-bottom: 0.625em;
+  color: #3a005f;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+section#team .carrousel {
+  position: relative;
+  width: 100%;
+  max-width: 62.5em;
+  margin: 0 auto;
+  overflow: hidden;
+  transform: scale(0.9);
+  transform-origin: center;
+}
+
+section#team .carrousel-track {
+  display: flex;
+  width: 300%; 
+  transition: transform 0.3s ease-in-out;
+}
+
+section#team .slide1,
+section#team .slide2,
+section#team .slide3 {
+  flex: 0 0 auto; 
+  flex: 80%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5625em;
+}
+
+section#team .carrousel img {
+  width: 12.625em;
+  height: auto; 
+  object-position: center top;
+  object-fit: cover;
+  /* border-radius: 0.625em; 
+  box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1); */
+}
+
+section#team .carrousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0.125em solid #ccc;
+  background-color: white;
+  border-radius: 50%;
+  width: 3.125em; 
+  height: 3.125em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+section#team .carrousel-btn img {
+  width: 60%;
+  height: auto;
+}
+
+section#team .carrousel-btn.prev {
+  left: 1em;
+}
+section#team .carrousel-btn.prev img {
+  transform: scaleX(-1);
+}
+
+section#team .carrousel-btn.next {
+  right: 1em;
+}
+
+section#team .carrousel-btn:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 0.375em 0.625em rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+/* Pour les tablettes (entre 768px et 1024px) */
+@media (max-width: 64em) { 
+  section#team h1 {
+    font-size: 1.75rem;
+  }
+
+  /*section#team .carrousel img {
+    width: 12.5em; 
+    height: 17.5em; 
+  }
+
+  section#team .carrousel-btn {
+    width: 2.5em; 
+    height: 2.5em;
+  }*/
+
+  section#team .slide1,
+  section#team .slide2,
+  section#team .slide3 {
+    gap: 1em; 
+    
+  }
+}
+
+/* Pour les mobiles */
+@media (max-width: 48em) { 
+  section#team h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+  }
+
+  section#team .carrousel {
+    transform: scale(1); /* Retire la réduction à 90% */
+    border: none;
+  }
+
+  section#team .carrousel img {
+    width: 10em; 
+    height: auto; 
+  }
+
+  section#team .carrousel-btn {
+    width: 2em;
+    height: 2em;
+    padding: 1.25em;
+  }
+
+  section#team .carrousel-btn.prev {
+    left: 0.5em; /* Ajustement des positions des boutons */
+  }
+
+  section#team .carrousel-btn.next {
+    right: 0.5em;
+  }
+
+  section#team .slide1,
+  section#team .slide2,
+  section#team .slide3 {
+    gap: 0.5em;
+    flex-direction: column; /* Lempilemnt */
+    
+  }
+}
+
+/* Pour les très petits écrans */
+@media (max-width: 30em) { 
+  section#team h1 {
+    font-size: 1.25rem;
+  }
+
+  section#team .carrousel img {
+    width: 8em; 
+    height: 11.25em; 
+  }
+
+  section#team .carrousel-btn {
+    width: 1.75em;
+    height: 1.75em;
+  }
+
+  section#team .slide1,
+  section#team .slide2,
+  section#team .slide3 {
+    gap: 0.5em;
+    flex-direction: column; 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Tests responsive Adam */
+/*
+@media (max-width: 1150px) {
+  section#team .carrousel-track,
+  section#team .carrousel-track > div[class^="slide"],
+  section#team .carrousel-track > div[class*="slide"] {
+    gap: calc(.5vw) !important;
+  }
+}
+@media (max-width: 1075px) {
+  section#team .carrousel-track,
+  section#team .carrousel-track > div[class^="slide"],
+  section#team .carrousel-track > div[class*="slide"] {
+    gap: calc(-20.33em + 40vw) !important;
+  }
+}
+@media (max-width: 820px) {
+  section#team .carrousel-track,
+  section#team .carrousel-track > div[class^="slide"],
+  section#team .carrousel-track > div[class*="slide"] {
+    gap: 0 !important;
+  }
+}
+*/

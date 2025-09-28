@@ -1,0 +1,276 @@
+section#popUpContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #0008;
+  z-index: 200;
+
+  animation-name: openPopUpContainer;
+  animation-duration: .4s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes openPopUpContainer {
+  0% {background-color: #0000;}
+  100% {background-color: #0008;}
+}
+
+section#popUpContainer .popUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25em;
+  position: relative;
+  min-width: calc(20em + 20vw);
+  min-height: calc(10em + 15vh);
+  border-radius: .75em;
+  background-color: var(--color-0, white);
+  box-shadow: 0 0 .4em 0 rgba(0, 0, 0, .15);
+  
+  animation-name: openPopUp;
+  animation-duration: .4s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes openPopUp {
+  0% {transform: scale(.9) rotate(2deg);}
+  100% {transform: scale(1) rotate(0deg);}
+}
+
+
+
+section#popUpContainer .popUp > .btn-close {
+  content: "";
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  width: 1.75em;
+  height: 1.75em;
+  
+  background-image: url("../img/icon-cross.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  opacity: .9;
+  cursor: pointer;
+
+  transition: all .2s ease-out;
+}
+section#popUpContainer .popUp > .btn-close:hover {
+  opacity: 1;
+  filter: drop-shadow(0 0 .15em rgba(0, 0, 0, .25));
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+section#popUpContainer .popUp.sending-message .status-info {
+  width: 4em;
+  height: 4em;
+}
+
+/*section#popUpContainer .popUp.sending-message[data-status="pending"] .status-info {*/
+section#popUpContainer .popUp.sending-message .status-info {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  animation-name: fadeIn;
+  animation-duration: .8s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+/*section#popUpContainer .popUp.sending-message[data-status="pending"] .status-info > div.animated-sending {*/
+section#popUpContainer .popUp.sending-message .status-info > div.animated-sending {
+  display: flex;
+  flex: 1;
+  gap: .25em;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0em;
+  top: 0em;
+
+  animation-duration: 1.2s !important;
+}
+section#popUpContainer .popUp.sending-message:not([data-status="pending"]) .status-info > div.animated-sending {
+  left: 100%;
+  top: .33em;
+}
+
+
+
+section#popUpContainer .popUp.sending-message .status-info > div.animated-success,
+section#popUpContainer .popUp.sending-message .status-info > div.animated-fail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: -100%;
+  top: .33em;
+}
+section#popUpContainer .popUp.sending-message[data-status="pending"] .status-info > div.animated-sending,
+section#popUpContainer .popUp.sending-message[data-status="successed"] .status-info > div.animated-success,
+section#popUpContainer .popUp.sending-message[data-status="failed"] .status-info > div.animated-fail {
+  left: 0%;
+  top: 0em;
+  transition: all 1.33s ease-out;
+  opacity: 1;
+
+  animation-name: float;
+  animation-duration: 3.6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes float {
+0% {transform: translateY(.33em);}
+100% {transform: translateY(-.33em);}
+}
+
+section#popUpContainer .popUp.sending-message .status-info > div.animated-success > img,
+section#popUpContainer .popUp.sending-message .status-info > div.animated-fail > img {
+  width: 66%;
+}
+
+/*section#popUpContainer .popUp.sending-message .status-info > div.animated-success {
+  background-color: var(--color-21, #0f0);
+}
+section#popUpContainer .popUp.sending-message .status-info > div.animated-fail {
+  background-color: var(--color-20, #f00);
+}*/
+
+
+
+section#popUpContainer .popUp.sending-message .status-info > div.animated-sending,
+section#popUpContainer .popUp.sending-message .status-info > div.animated-success,
+section#popUpContainer .popUp.sending-message .status-info > div.animated-fail {
+  display: flex;
+  flex: 1;
+  gap: .25em;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+
+  transition: all 1s ease-in-out;
+}
+
+
+
+
+
+section#popUpContainer .popUp.sending-message .status-info > div.animated-sending > div:nth-child(1) {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  /*justify-content: space-between;*/
+  gap: .5em;
+
+  overflow-x: hidden;
+
+  animation-name: wiggleX;
+  animation-duration: .66s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes wiggleX {
+  0% {transform: translateX(-.125em);}
+  100% {transform: translateX(.125em);}
+}
+section#popUpContainer .popUp.sending-message .status-info > div.animated-sending > div:nth-child(1) > div {
+  width: 100%;
+  height: .175em;
+  border-radius: 50em;
+  background-color: #000;
+
+  transform: translateX(-100%);
+  opacity: 0;
+
+  animation-name: scrollX;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+section#popUpContainer .popUp.sending-message .status-info > div.animated-sending > div:nth-child(1) > div:nth-child(2) {
+  animation-delay: .33s;
+}
+section#popUpContainer .popUp.sending-message .status-info > div.animated-sending > div:nth-child(1) > div:nth-child(3) {
+  animation-delay: .66s;
+}
+@keyframes scrollX {
+  0% {transform: translateX(100%); opacity: 1;}
+  100% {transform: translateX(-50%); opacity: 0;}
+}
+section#popUpContainer .popUp.sending-message .status-info > div.animated-sending > div:nth-child(2) {
+  display: flex;
+  flex: 1.33;
+  background-image: url("../img/icon-mail.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  animation-name: slideFromLeft;
+  animation-duration: .8s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+@keyframes slideFromLeft {
+  0% {transform: translateX(-1em);}
+  100% {transform: translateX(0em);}
+}
+
+
+section#popUpContainer .popUp.sending-message::after {
+  transition: color .4s ease-out;
+}
+section#popUpContainer .popUp.sending-message[data-status="pending"]::after {
+  color: var(--color-10, black);
+}
+section#popUpContainer .popUp.sending-message[data-status="failed"]::after {
+  /*color: var(--color-20, red);*/
+  color: var(--color-4, orange);
+}
+section#popUpContainer .popUp.sending-message[data-status="successed"]::after {
+  color: var(--color-21, #00ff00);
+}
+html[lang="fr"] section#popUpContainer .popUp.sending-message[data-status="pending"]::after {
+  content: "Envoi du message...";
+}
+html[lang="fr"] section#popUpContainer .popUp.sending-message[data-status="failed"]::after {
+  content: "Erreur à l'envoi du message.";
+}
+html[lang="fr"] section#popUpContainer .popUp.sending-message[data-status="successed"]::after {
+  content: "Message envoyé.";
+}
+html[lang="en"] section#popUpContainer .popUp.sending-message[data-status="pending"]::after {
+  content: "Sending message...";
+}
+html[lang="en"] section#popUpContainer .popUp.sending-message[data-status="failed"]::after {
+  content: "Error while sending message.";
+}
+html[lang="en"] section#popUpContainer .popUp.sending-message[data-status="successed"]::after {
+  content: "Message successfully sent.";
+}

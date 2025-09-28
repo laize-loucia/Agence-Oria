@@ -1,0 +1,174 @@
+section#services.preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4em;
+
+  padding: 1em 0;
+
+  text-transform: uppercase;
+}
+section#services.preview .subjects,
+section#services.preview #subjects-associated-btns [class^="field-"],
+section#services.preview #subjects-associated-btns [class*="field-"] {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+section#services.preview .subjects {
+  display: flex;
+  align-items: flex-start;
+  /*gap: calc(0em + 3vw);*/
+  gap: calc(1em + 2.5vw);
+}
+section#services.preview .subjects .item {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 1em;
+
+  /*max-width: 7.5em;*/ /* Used <br /> instead */
+  width: 6.66em;
+
+  cursor: pointer;
+}
+
+section#services.preview .subjects .item .subject-name {
+  text-align: center;
+  font-weight: normal;
+  font-size: .85em;
+  opacity: .66;
+}
+section#services.preview .subjects .item:hover .subject-name,
+section#services.preview .subjects .item.selected .subject-name {
+  color: var(--color-2);
+  opacity: 1;
+}
+/*section#services.preview .subjects .item.selected .subject-name {
+  font-weight: bold;
+}*/
+
+section#services.preview .subjects .item .icon-wrapper {
+  --diameter: 4em;
+  width: var(--diameter);
+  height: var(--diameter);
+  border-radius: var(--diameter);
+  background-color: var(--color-0);
+}
+section#services.preview .subjects .item.selected .icon-wrapper {
+  border: .0em dashed var(--color-3);
+  background-color: var(--color-2);
+}
+section#services.preview .subjects .item .icon-wrapper rect.border-1 {
+  /*--original-dashoffset: 3;*/
+  /*--original-dashoffset: 5;*/
+
+  width: 100%;
+  height: 100%;
+  rx: 100%;
+  ry: 100%;
+  fill: none;
+  stroke: var(--color-10);
+  stroke-width: 3;
+  /*stroke-dasharray: 8, 17;*/
+  stroke-dasharray: 11, 14;
+  /*stroke-dashoffset: calc(0 + var(--original-dashoffset));*/
+  stroke-dashoffset: 5;
+  stroke-linecap: round;
+
+  opacity: .66;
+  transition: all .6s ease, stroke .0s ease, stroke-dasharray .25s ease;
+}
+section#services.preview .subjects .item:hover .icon-wrapper rect.border-1 {
+  /*stroke-dashoffset: calc(-100 + var(--original-dashoffset));*/
+  stroke: var(--color-2);
+  stroke-dashoffset: -95;
+}
+section#services.preview .subjects .item .icon-wrapper image.icon {
+  --icon-square-width: 48%;
+  --icon-width: var(--icon-square-width);
+  --icon-height: var(--icon-square-width);
+  --icon-x: calc((100% - var(--icon-width)) /2);
+  --icon-y: calc((100% - var(--icon-height)) /2);
+  x: var(--icon-x);
+  y: var(--icon-y);
+  width: var(--icon-width);
+  height: var(--icon-height);
+}
+section#services.preview .subjects .item.selected .icon-wrapper rect.border-1 {
+  stroke: var(--color-0, white);
+  stroke-width: 0;
+  stroke-dasharray: 99, 1;
+  transition: stroke-width .6s ease-in .25s, stroke-dasharray .4s ease;
+}
+section#services.preview .subjects .item.selected .icon-wrapper image.icon {
+  filter: invert(1) brightness(10);
+}
+
+
+
+section#services.preview #subjects-associated-btns [class^="field-"]:not(.selected),
+section#services.preview #subjects-associated-btns [class*="field-"]:not(.selected) {
+  display: none;
+}
+section#services.preview #subjects-associated-btns [class^="field-"],
+section#services.preview #subjects-associated-btns [class*="field-"] {
+  display: flex;
+  gap: calc(.5em + 2vw) calc(-2em + 10vw);
+  /*gap: calc(-3.33em + 13.33vw);*/
+}
+section#services.preview .subjects .subject-name,
+section#services.preview #subjects-associated-btns [class^="btn-"] .value,
+section#services.preview #subjects-associated-btns [class*="btn-"] .value {
+  margin: 0;
+  font-size: .85em;
+}
+section#services.preview #subjects-associated-btns [class^="btn-"],
+section#services.preview #subjects-associated-btns [class*="btn-"],
+section#services.preview #subjects-associated-btns .icon-right-arrow {
+  transition: filter .25s linear, color .05s linear;
+}
+section#services.preview #subjects-associated-btns [class^="btn-"]:hover .icon-right-arrow,
+section#services.preview #subjects-associated-btns [class*="btn-"]:hover .icon-right-arrow {
+  filter: invert(1);
+}
+
+/*
+section#services.preview #subjects-associated-btns [class^="btn-"],
+section#services.preview #subjects-associated-btns [class*="btn-"] {
+  font-size: .85em;
+  padding: .75em 1.5em;
+  padding-right: 2.75em;
+  border: .05em solid var(--color-2);
+  border-radius: .66em;
+  background: url("../img/icon-arrow-right-2.svg") no-repeat;
+  background-color: var(--color-0);
+  background-position-x: calc(100% - 1em);
+  background-position-y: 52.5%;
+  background-size: .85em;
+}
+section#services.preview #subjects-associated-btns [class^="btn-"]:hover,
+section#services.preview #subjects-associated-btns [class*="btn-"]:hover {
+  color: var(--color-0);
+  background-color: var(--color-2);
+}
+*/
+
+section#services.preview #subjects-associated-btns [class^="btn-"],
+section#services.preview #subjects-associated-btns [class*="btn-"] {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+  font-size: .875em;
+  padding: .85em 1.9em;
+  padding-right: 1em;
+  border: .05em solid var(--color-10);
+  border-radius: .66em;
+  background-color: var(--color-0);
+  color: var(--color-10);
+}
+section#services.preview #subjects-associated-btns [class^="btn-"]:hover,
+section#services.preview #subjects-associated-btns [class*="btn-"]:hover {
+  color: var(--color-0);
+  background-color: var(--color-2);
+}

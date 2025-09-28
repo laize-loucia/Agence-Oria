@@ -1,0 +1,124 @@
+
+
+@media screen and (max-width: 1050px) {
+  section#landing {
+    aspect-ratio: 1.66 / 1 !important;
+  }
+  section#landing > .content {
+    max-width: 66% !important;
+  }
+
+  section#agencyStory {
+    gap: calc(2.5em + 3vw) !important;
+  }
+}
+@media screen and (max-width: 825px) {
+  section#landing {
+    aspect-ratio: 1.33 / 1 !important;
+  }
+
+  section#agencyStory {
+    gap: calc(1.5em + 2vw) !important;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 825px) {
+  section#agencyStory > :last-child > img {
+    padding: 0 !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  section#landing {
+    aspect-ratio: 1 / 1 !important;
+  }
+
+  section#agencyStory {
+    flex-direction: column !important;
+  }
+  section#agencyStory > .timeline {
+    max-width: calc(3.33em + 60%) !important;
+    max-height: calc(5em + 75vw) !important;
+  }
+  section#agencyStory > .timeline img {
+    padding: calc(.25em + 5vw) 0em !important;
+  }
+}
+@media screen and (max-width: 625px) {
+  section#landing {
+    /*aspect-ratio: .66 / 1 !important;*/
+    height: 100vh;
+  }
+  section#landing > .content {
+    max-width: 75% !important;
+  }
+  section#agencyStory > .timeline {
+    max-width: 100% !important;
+  }
+}
+@media screen and (max-width: 500px) and (min-width: 350px) {
+  section#agencyStory #keyNumbers {
+    padding: .25em calc(.5em + 4vw) !important;
+    padding-bottom: 1.125em !important;
+
+    font-size: calc(.15em + 3vw);
+  }
+  section#agencyStory #keyNumbers > *:first-child {
+    margin-top: .85em;
+  }
+  section#agencyStory #keyNumbers .listedNumbers {
+    gap: calc(.25em + 1vw) !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  /*section#landing {
+    aspect-ratio: .5 / 1 !important;
+  }*/
+  section#landing > .content {
+    max-width: 85% !important;
+  }
+  section#landing > .content h1 {
+    font-size: 2.66em !important;
+  }
+}
+@media screen and (max-width: 350px) {
+  /*section#landing {
+    aspect-ratio: .4 / 1 !important;
+  }*/
+  section#landing > .content {
+    max-width: 85% !important;
+  }
+  section#landing > .content h1 {
+    font-size: 2.66em !important;
+  }
+
+  /*
+  section#agencyStory #keyNumbers {
+    padding: .25em calc(.5em + 4vw) !important;
+    padding-bottom: 1.125em !important;
+
+    font-size: calc(.15em + 3vw);
+  }
+  section#agencyStory #keyNumbers > *:first-child {
+    margin-top: .85em;
+  }
+  section#agencyStory #keyNumbers .listedNumbers {
+    gap: calc(.25em + 1vw) !important;
+  }*/
+  
+  section#agencyStory #keyNumbers .listedNumbers {
+    flex-wrap: wrap !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  section#agencyStory section#keyNumbers .listedNumbers {
+    padding-right: 0 !important;
+  }
+}

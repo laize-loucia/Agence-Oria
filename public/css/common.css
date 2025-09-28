@@ -1,0 +1,270 @@
+@import './popUp.css';
+
+:root {
+	--color-0: #ffffff;
+	--color-1: #080017;
+	--color-2: #38009E;
+	--color-3: #060011;
+	--color-4: #FE891D;
+	--color-5: #6A4BA5;
+	--color-6: #311563;
+	--color-7: #260f51;
+	--color-10: #000000;
+	--color-11: #F5F5F5;
+	--color-20: #F00;
+	--color-21: #08cf07;
+	--color-30: #00000000;
+	--color-31: #00000088;
+	--gradient-0: linear-gradient(to right, var(--color-1), var(--color-4));
+	--gradient-1: linear-gradient(83.83deg, var(--color-3) -12.6%, var(--color-5) 62.55%, var(--color-2) 109.29%);
+	--gradient-2: linear-gradient(to bottom, var(--color-7), var(--color-6), var(--color-7));
+	--gradient-3: linear-gradient(to right, var(--color-2), var(--color-4));
+	--gradient-4: linear-gradient(to left, var(--color-2), var(--color-4));
+	--gradient-5: linear-gradient(to right, var(--color-30), var(--color-31), var(--color-30));
+	--header-yoffset: .33em;
+	--header-height: 3.5em;
+	--header-safe-area-height: calc(var(--header-yoffset) + var(--header-height));
+}
+
+* {
+	transition: all .2s linear;
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 100vh;
+	overflow-x: hidden;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	position: relative;
+
+	font-family: Roboto;
+	background-color: var(--color-11);
+}
+
+
+
+body > main {
+	flex-grow: 1;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	/*gap: 2.5rem;*/
+	gap: calc(0.25em + 2.5vw);
+	/* use if header sticky, but solution right now uses fixed position */
+	/* margin-top: var(--header-yoffset); */ 
+	padding-bottom: 4em;
+}
+
+
+
+/*main > section:not(#landing) {
+	overflow: hidden;
+}
+:target { scroll-margin-top: 480px; }*/
+
+/*main > section {
+	scroll-margin-top: 5em;
+}*/
+
+
+h1 {
+	font-family: InstrumentSerif-Regular;
+	font-size: 3em;
+}
+h2 {
+	font-family: Roboto;
+	font-size: 1.6em;
+}
+p {
+	font-family: SF-Pro-Display;
+}
+a[class^="btn"],
+a[class*="btn"] {
+	text-decoration: none;
+}
+a.white{
+	color: var(--color-0);
+}
+a.black{
+	color: var(--color-10);
+}
+
+input[type="submit"],
+button[type="submit"] {
+	cursor: pointer;
+	font-family: Roboto;
+}
+
+.hoverable-btn-1 *[class^="btn"],
+.hoverable-btn-1 *[class*="btn"] {
+	padding: .5em 1.4em;
+	font-size: .85em;
+
+	border: 0;
+	border-radius: 1.5em;
+	background-color: var(--color-2);
+	color: var(--color-0);
+
+	background-color: var(--color-2);
+}
+.hoverable-btn-1 *[class^="btn"]:hover,
+.hoverable-btn-1 *[class*="btn"]:hover {
+	background-color: var(--color-4);
+}
+
+
+.no-padding {
+	padding: 0;
+}
+
+ul.row-menu {
+	display: flex;
+	flex-direction: row;
+	
+	list-style: none;
+}
+ul.row-menu > li {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	text-decoration: none;
+	color: var(--color-0);
+}
+ul.row-menu > li > a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	width: 100%;
+	height: 100%;
+
+	color: var(--color-0);
+	text-decoration: none;
+}
+
+
+[class^="decoratedItem"].decorationContainer,
+[class*="decoratedItem"].decorationContainer,
+[class^="decoratedItem"] .decorationContainer,
+[class*="decoratedItem"] .decorationContainer {
+	position: relative;
+}
+.decoratedItem-1 .itemDecoration {
+	--decoration-height: .1em;
+	position: absolute;
+	bottom: -.05em;
+	width: 0%;
+	height: var(--decoration-height);
+	margin-top: calc(var(--decoration-height) * (-1));
+	border-radius: 1em;
+	background-color: var(--color-0);
+	opacity: 0;
+	transition: all .4s ease;
+}
+.decoratedItem-1:hover .itemDecoration {
+	width: 100%;
+	opacity: 1;
+}
+
+
+
+
+
+
+.afterico-right-arrow {
+	display: flex;
+}
+
+.afterico-right-arrow::after {
+	/*content: url('../img/icon-arrow-right-1.svg');*/
+	--arrow-width: 1em;
+	--arrow-height: .85em;
+	content: "";
+	display: block;
+	position: relative;
+	width: calc(var(--arrow-width));
+	height: calc(var(--arrow-height));
+	margin-left: .5em;
+	background: url('../img/icon-arrow-right-1.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position-x: left;
+	background-position-y: center;
+}
+
+
+
+
+.icon-right-arrow,
+.icon-right-arrow {
+  width: 1em;
+  height: 100%;
+  background: url("../img/icon-arrow-right-2.svg") no-repeat;
+  background-position-x: center;
+  background-position-y: 52.5%;
+  background-size: .85em;
+}
+
+
+
+
+
+
+
+
+
+.row,
+.column {
+	display: flex;
+}
+.column {
+	flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* unused */
+
+.prevent-select,
+.prevent-select * {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.scroll-disabler {
+	position: fixed;
+	width: 100vw;
+	height: 100%;
+  background-color: rgba(0,0,0 , 0.0001);
+}
+
+
+
+
+section:target {
+	scroll-margin: calc(5vh + var(--header-safe-area-height, 3.33em));
+}
+

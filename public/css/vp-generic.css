@@ -1,0 +1,8 @@
+@import "./fonts.css";
+@import "./bodyHeaderFooter.css";
+@import "./common.css";
+
+main > section:not(#landing){
+  margin: 0 10.75%;
+  margin-bottom: 3.5em;
+}
