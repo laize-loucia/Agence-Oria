@@ -1,0 +1,46 @@
+[
+  {
+    "id": 0,
+    "label": "Skyworth",
+    "type_fr": "Site vitrine",
+    "type_en": "Showcase website",
+    "iconFileName": "logo-skyworth.svg",
+    "mockupFileName": "mockup-project-skyworth-1.svg",
+    "mainIllustrationFileName": "illust-project-skyworth-1.png",
+    "shortDescription_fr": "Nous avons conçu et développé le site web de Skyworth France pour le lancement de cette nouvelle marque de voiture électrique, en créant une plateforme qui reflète ses valeurs et ambitions pour le marché français.",
+    "shortDescription_en": "We designed and developed the Skyworth France website for the launch of this new electric car brand, creating a platform that reflects its values and ambitions for the French market."
+  },
+  {
+    "id": 1,
+    "label": "EcoEcho",
+    "type_fr": "Site vitrine",
+    "type_en": "Showcase website",
+    "iconFileName": "logo-ecoecho.svg",
+    "mockupFileName": "mockup-project-ecoecho-1.svg",
+    "mainIllustrationFileName": "illust-project-ecoecho-1.png",
+    "shortDescription_fr": "Nous avons développé l'application de reconnaissance vocale GuessMySong, permettant d'identifier des chansons en chantant ou fredonnant, avec une expérience utilisateur fluide et intuitive.",
+    "shortDescription_en": "We developed the GuessMySong voice recognition application, enabling users to identify songs by singing or humming, with a fluid and intuitive user experience."
+  },
+  {
+    "id": 2,
+    "label": "Ticketmaster",
+    "type_fr": "Refonte de site web",
+    "type_en": "Website redesign",
+    "iconFileName": "logo-ticketmaster.svg",
+    "mockupFileName": "mockup-project-ticketmaster-1.svg",
+    "mainIllustrationFileName": "illust-project-ticketmaster-1.png",
+    "shortDescription_fr": "Nous avons développé un site web pour promouvoir un événement sur les nouvelles technologies, avec une interface intuitive et attrayante. Ce projet a renforcé nos compétences en design et en collaboration multiculturelle.",
+    "shortDescription_en": "We developed a website to promote an event on new technologies, with an intuitive and attractive interface. This project strengthened our skills in design and multicultural collaboration."
+  },
+  {
+    "id": 3,
+    "label": "Top 10 des films d'horreur les plus terrifiants",
+    "type_fr": "Site vitrine",
+    "type_en": "Showcase website",
+    "iconFileName": "logo-top10horrormovies.svg",
+    "mockupFileName": "mockup-project-top10horrormovies-1.svg",
+    "mainIllustrationFileName": "mockup-project-top10horrormovies-1.svg",
+    "shortDescription_fr": "",
+    "shortDescription_en": "en"
+  }
+]

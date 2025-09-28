@@ -1,0 +1,26 @@
+[
+  {
+    "catchphrase": "Des solutions personnalisées",
+    "shortDescription": "Chaque projet de refonte de site web est unique. Nous concevons des pages sur mesure, parfaitement adaptées pour répondre aux objectifs spécifiques de votre entreprise.",
+    "iconFileName": "services-feature-icon-1.svg",
+    "iconAlt": "Sur-mesure"
+  },
+  {
+    "catchphrase": "SEO intégré dès la phase de conception",
+    "shortDescription": "Dès les premières étapes de votre projet de refonte, nos experts SEO optimisent votre site pour garantir une visibilité accrue et attirer un trafic qualifié.",
+    "iconFileName": "services-feature-icon-2.svg",
+    "iconAlt": "Optimisation SEO"
+  },
+  {
+    "catchphrase": "Une équipe d'experts dédiés",
+    "shortDescription": "Une équipe de 8 experts seniors spécialisés et plus de 45 projets de refonte réalisés en 2 ans, apportant une expertise et une expérience incomparables.",
+    "iconFileName": "services-feature-icon-3.svg",
+    "iconAlt": "Équipe expérimentée"
+  },
+  {
+    "catchphrase": "Support tout au long du projet",
+    "shortDescription": "Gestion de projet précise avec suivis hebdomadaires et accès à nos outils de gestion dédiés.",
+    "iconFileName": "services-feature-icon-4.svg",
+    "iconAlt": "Suivi et gestion sur le long-terme"
+  }
+]

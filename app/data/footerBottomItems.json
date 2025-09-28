@@ -1,0 +1,25 @@
+[
+  {
+    "id": 0,
+    "label-fr": "Politique de confidentialité",
+    "label-en": "Privacy policy",
+    "href": "#privacyPolicy"
+  },
+  {
+    "id": 1,
+    "label-fr": "Cookies",
+    "label-en": "Cookies",
+    "href": "#cookies"
+  },
+  {
+    "id": 2,
+    "label-fr": "Mentions légales",
+    "label-en": "Legal notices"
+  },
+  {
+    "id": 3,
+    "label-fr": "Contact",
+    "label-en": "Contact",
+    "href": "?#contact"
+  }
+]

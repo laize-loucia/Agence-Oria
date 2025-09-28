@@ -1,0 +1,88 @@
+[
+  {
+    "id": 0,
+    "label-fr": "Graphisme",
+    "label-en": "Graphism",
+    "field": "graphism",
+    "iconFileName": "icon-graphism.svg",
+    "subServices": [
+      {
+        "label-fr": "Graphisme",
+        "label-en": "Graphic design",
+        "btnClass": "graphism"
+      },
+      {
+        "label-fr": "Création de logos",
+        "label-en": "Logo design",
+        "btnClass": "logos"
+      },
+      {
+        "label-fr": "Chartes graphiques",
+        "label-en": "Graphic charters",
+        "btnClass": "graphic-charters"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "label-fr": "Impression",
+    "label-en": "Print",
+    "field": "print",
+    "iconFileName": "icon-print.svg",
+    "subServices": [
+      {
+        "label-fr": "Impression offset",
+        "label-en": "Offset printing",
+        "btnClass": "offset"
+      },
+      {
+        "label-fr": "Impression numérique",
+        "label-en": "Digital printing",
+        "btnClass": "digital"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "label-fr": "Services web",
+    "label-en": "Web services",
+    "field": "web",
+    "iconFileName": "icon-websites.svg",
+    "subServices": [
+      {
+        "label-fr": "Création de sites web",
+        "label-en": "Website design",
+        "btnClass": "websites"
+      },
+      {
+        "label-fr": "Référencement SEO",
+        "label-en": "SEO referencing",
+        "btnClass": "seo"
+      },
+      {
+        "label-fr": "Email marketting",
+        "label-en": "Email marketing",
+        "btnClass": "email"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "label-fr": "Marquages publicitaires",
+    "label-en": "Advertising",
+    "field": "ads",
+    "iconFileName": "icon-ads.svg",
+    "subServices": [
+      {
+        "label-fr": "Impression offset",
+        "label-en": "Offset printing",
+        "btnClass": "offset"
+      },
+      {
+        "label-fr": "Impression numérique",
+        "label-en": "Digital printing",
+        "btnClass": "digital"
+      }
+    ]
+  }
+]

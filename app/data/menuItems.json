@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "label-fr": "Accueil",
+    "label-en": "Home",
+    "href": ".?#"
+  },
+  {
+    "id": 1,
+    "label-fr": "Histoire",
+    "label-en": "History",
+    "href": "?#agencyStory"
+  },
+  {
+    "id": 2,
+    "label-fr": "Équipe",
+    "label-en": "Team",
+    "href": "?#team"
+  },
+  {
+    "id": 3,
+    "label-fr": "Projets",
+    "label-en": "Projects",
+    "href": "?#projects"
+  },
+  {
+    "id": 4,
+    "label-fr": "Services",
+    "label-en": "Services",
+    "href": "#"
+  }
+]
